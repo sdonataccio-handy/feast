@@ -183,7 +183,7 @@ class SqlRegistryConfig(RegistryConfig):
     registry_type: StrictStr = "sql"
     """ Registry type selector """
     path: StrictStr = ""
-    """ str: Path to metadata store.
+    """ str: Path to metadata store."""
 
 class SqlRegistry(BaseRegistry):
     def __init__(
