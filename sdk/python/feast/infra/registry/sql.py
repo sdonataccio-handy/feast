@@ -177,6 +177,13 @@ feast_metadata = Table(
     Column("last_updated_timestamp", BigInteger, nullable=False),
 )
 
+from pydantic import StrictStr
+class SqlRegistryConfig(RegistryConfig):
+    """Registry config for Sql"""
+    registry_type: StrictStr = "sql"
+    """ Registry type selector """
+    path: StrictStr = ""
+    """ str: Path to metadata store.
 
 class SqlRegistry(BaseRegistry):
     def __init__(
